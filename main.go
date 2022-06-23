@@ -36,7 +36,9 @@ func listTodo() {
 		panic(err)
 	}
 
-	fmt.Println(todos)
+	for _, todo := range todos {
+		fmt.Printf("%d %s\n", todo.Id, todo.Name)
+	}
 }
 
 func updateTodo() {
